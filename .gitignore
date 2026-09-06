@@ -2,3 +2,8 @@
 target/
 .DS_Store
 target/
+**/target/
+# IntelliJ local settings
+.idea/
+*.iml
+
