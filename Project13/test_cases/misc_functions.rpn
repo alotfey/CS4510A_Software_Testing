@@ -1,0 +1,139 @@
+# Test misc. math functions swap, pop, abs, sign, recip, chs, min, max
+# floor, ceil, round, trunc, fact
+
+# Tests go here.
+
+# clear empties the stack before we start
+99
+clear
+
+# Test 1: swap and pop. After 1 2 swap, X is 1, pop removes it, leaving 2
+1
+2
+swap
+pop
+2
+div
+1
+-
+abs
+
+# Test 2: abs, chs and neg: abs(chs 7) + neg(-4) = 7 + 4 = 11
+7
+chs
+abs
+-4
+neg
+add
+11
+div
+1
+-
+abs
++
+
+# Test 3: sign and recip: sign(-8) * recip(4) = -1 * 0.25 = -0.25
+-8
+sign
+4
+recip
+mult
+-0.25
+div
+1
+-
+abs
++
+
+# Test 4: min and max: min(3, 9) + max(3, 9) = 3 + 9 = 12
+3
+9
+min
+3
+9
+max
+add
+12
+div
+1
+-
+abs
++
+
+# Test 5: floor and ceil: floor(2.7) * ceil(2.2) = 2 * 3 = 6
+2.7
+floor
+2.2
+ceil
+mult
+6
+div
+1
+-
+abs
++
+
+# Test 6: round on both signs: round(2.5) - round(-2.5) = 3 - (-3) = 6
+2.5
+round
+-2.5
+round
+sub
+6
+div
+1
+-
+abs
++
+
+# Test 7: trunc on both signs: trunc(2.9) - trunc(-2.9) = 2 - (-2) = 4
+2.9
+trunc
+-2.9
+trunc
+sub
+4
+div
+1
+-
+abs
++
+
+# Test 8: fact and its alias !: 5! + 1! = 120 + 1 = 121
+5
+fact
+1
+!
+add
+121
+div
+1
+-
+abs
++
+
+# Test 9: the y command and saving X and Y into variables
+# Stack is 10 then 4, so y copies 10 on top: 10 + 4 + 10 = 24
+10
+4
+a = y
+b = x
+y
+add
+add
+a
+b
+add
+a
+add
+div
+1
+-
+abs
+
+# Should be zero or very small here so add to previous % error
++
+
+# Integration test that runs this script will confirm that
+# the final result is zero or very small.
+stop

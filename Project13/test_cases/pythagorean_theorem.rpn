@@ -1,0 +1,25 @@
+# Pythagorean Theorem for right triangles a^2 + b^2 = c^2
+a=3
+b=4
+c=5
+a
+2
+pow
+b
+b
+mult
+add
+c
+x
+mult
+
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+sub
+abs
+
+# Should be zero or very small here
+
+# Integration test that runs this script will confirm that
+# the final result is zero or very small.

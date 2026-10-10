@@ -1,0 +1,39 @@
+# Golden Ratio = (1 + sqrt(5)) / 2
+
+# Do your calculation
+1
+5
+2
+root
+add
+2
+div
+phi = x
+
+# This is the expected result
+1.618033988749895
+
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+
+# Should be zero or very small here
+
+# Second check: the golden ratio is the number where phi^2 = phi + 1
+phi
+phi
+mult
+phi
+1
+add
+div
+1
+-
+abs
++
+
+# Integration test that runs this script will confirm that
+# the final result is zero or very small.
+end

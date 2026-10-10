@@ -1,0 +1,68 @@
+# Area of a regular polygon of n sides inscribed in a circle of radius r
+# n * r^2 * sin(π/n) * cos(π/n)
+n = 6
+r = 3
+
+# Do your calculation with n and r here...
+n
+r
+r
+mult
+mult
+π
+n
+div
+sin
+mult
+pi
+n
+/
+cos
+*
+
+# This is the expected result
+23.382685902179843
+
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here
+
+# Do another computation here...
+# Approx pi with large number of sides
+n = 1000000
+r = 1
+n
+
+# Do your calculation again with n and r here...
+# n is already on the stack from the line above, so start with r^2
+r
+r
+mult
+mult
+π
+n
+div
+sin
+mult
+pi
+n
+/
+cos
+*
+
+# This is the expected result
+3.141592653569122
+
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here so add to previous % error
++
+
+# Integration test that runs this script will confirm that
+# the final result is zero or very small.

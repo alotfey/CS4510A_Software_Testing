@@ -1,0 +1,99 @@
+# Compute pi using Chudnovsky formula
+# https://en.wikipedia.org/wiki/Pi
+
+# term 0
+13591409
+
+# term 1
+k=1
+# Compute term 1 here
+-1
+k
+ipow
+6
+k
+*
+fact
+mult
+545140134
+k
+mult
+13591409
+add
+mult
+3
+k
+mult
+!
+div
+k
+fact
+3
+ipow
+div
+640320
+3
+k
+mult
+ipow
+div
++
+
+# term 2
+k=2
+# Compute term 2 here same as term 1 using k
+-1
+k
+ipow
+6
+k
+*
+fact
+mult
+545140134
+k
+mult
+13591409
+add
+mult
+3
+k
+mult
+!
+div
+k
+fact
+3
+ipow
+div
+640320
+3
+k
+mult
+ipow
+div
++
+
+# Multiply the leading factor
+12
+mult
+640320
+1.5
+pow
+div
+
+# Then take the reciprocal
+recip
+
+# This is the expected result
+pi
+
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here
+
+# Integration test that runs this script will confirm that
+# the final result is zero or very small.

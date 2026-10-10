@@ -1,0 +1,43 @@
+# Circle diameter = 2πr
+r=20
+
+# Do your calculation with n and r here...
+2
+π
+r
+mult
+mult
+
+# This is the expected result
+125.66370614359173
+
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here
+
+# Circle area = πr^2
+r=10
+
+# Do your calculation with n and r here...
+pi
+r
+r
+*
+*
+
+# This is the expected result
+314.159265358979324
+
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here so add to previous % error
++
+
+# Integration test that runs this script will confirm that
+# the final result is zero or very small.

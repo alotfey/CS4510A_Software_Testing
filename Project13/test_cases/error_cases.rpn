@@ -1,0 +1,33 @@
+# Error cases tested here.
+
+# Integration test that runs this script will have to search
+# the output to find the expected error messages.
+
+# This should generate a "Stack empty!" message.
+pop
+
+# Test other error situations here.
+
+# Using a variable that was never defined
+foo
+
+# Assigning to a predefined name is not allowed
+pi = 4
+
+# Assigning something that is not a number or x or y
+q = abc
+
+# 0 to the power 0 is indeterminate, so ipow throws an exception
+0
+0
+ipow
+
+# Reading X when the stack is empty
+clear
+x
+
+# An assignment with nothing after the equals sign
+z =
+
+0.0
+exit

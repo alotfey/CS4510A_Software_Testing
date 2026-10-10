@@ -1,0 +1,84 @@
+# Various trigonometric formula tests using cos, sin, tan, acos, asin, atan
+# https://trigidentities.net/
+
+# Tests go here.
+
+# Test 1: Pythagorean identity sin^2 + cos^2 = 1
+0.7
+sin
+x
+mult
+0.7
+cos
+x
+mult
+add
+1
+div
+1
+-
+abs
+
+# Test 2: tan = sin / cos
+0.7
+tan
+0.7
+sin
+0.7
+cos
+div
+div
+1
+-
+abs
++
+
+# Test 3: the inverse functions undo the functions
+# asin(sin(0.5)) + acos(cos(0.5)) + atan(tan(0.5)) = 1.5
+0.5
+sin
+asin
+0.5
+cos
+acos
+add
+0.5
+tan
+atan
+add
+1.5
+div
+1
+-
+abs
++
+
+# Test 4: atan2(1, 1) = pi/4 (Y is 1, X is 1)
+1
+1
+atan2
+pi
+4
+div
+div
+1
+-
+abs
++
+
+# Test 5: atan2(1, -1) = 3pi/4, which plain atan cannot tell apart
+1
+-1
+atan2
+3
+pi
+mult
+4
+div
+div
+1
+-
+abs
+
+# Should be zero or very small here so add to previous % error
++

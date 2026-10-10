@@ -1,0 +1,93 @@
+# Various power and logarithmic formula tests using ipow, pow, root, 
+# exp, log, exp10 and log10
+
+# Tests go here.
+
+# Test 1: ipow and pow must agree: 2^10 = 1024
+2
+10
+ipow
+2
+10
+pow
+div
+1
+-
+abs
+
+# Test 2: anything^0 = 1 and 0^anything = 0, so 7^0 + 0^5 = 1
+7
+0
+ipow
+0
+5
+ipow
+add
+1
+div
+1
+-
+abs
++
+
+# Test 3: root undoes pow: cube root of 3^3 is 3
+3
+3
+pow
+3
+root
+3
+div
+1
+-
+abs
++
+
+# Test 4: log undoes exp: log(exp(2.5)) = 2.5
+2.5
+exp
+log
+2.5
+div
+1
+-
+abs
++
+
+# Test 5: log10 undoes exp10: log10(10^3) = 3
+3
+exp10
+log10
+3
+div
+1
+-
+abs
++
+
+# Test 6: natural log of e is 1, and log(a*b) = log(a) + log(b)
+e
+log
+4
+5
+mult
+log
+add
+4
+log
+5
+log
+add
+1
+add
+div
+1
+-
+abs
+
+# Should be zero or very small here so add to previous % error
++
+
+# Integration test that runs this script will confirm that
+# the final result is zero or very small.
+quit
